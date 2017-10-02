@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Image} from 'react-native';
 
 export default class Login extends Component {
   render() {
     return (
       <View style={styles.container}>
-        
+        <View style={styles.logoContainer}>
+          <Image
+            style={styles.logo}
+            source={require('../../../images/bm_logo_white.png')}>
+          </Image>
+        </View>
+        <View style={styles.formContainer}>
 
+        </View>
       </View>
     );
   }
@@ -15,6 +22,16 @@ export default class Login extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#3498db'
+    backgroundColor: '#092d57'
+  },
+  logoContainer: {
+    alignItems: 'center',
+    flexGrow: 1,
+    justifyContent: 'center'
+
+  },
+  logo: {
+    width: 100,
+    height: 100
   }
 });
